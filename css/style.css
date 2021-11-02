@@ -1,0 +1,125 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-padding-top: 70px; 
+}
+
+ .carousel-item{
+     height: 32rem;
+} 
+.carousel-inner img{
+    height: 600px;
+}
+/* things to do */
+#middle{
+    text-align: center;
+    padding-top: 20px;
+    color: rgb(97, 34, 9);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#things{
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 30px;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+    line-height: 2em;
+}
+/* things to do ends */
+
+/* footer starts here */
+footer{
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 175px;
+    color: white;
+    background-color: darkslategrey  
+}
+.icon{
+    text-align: center;
+    font-size: 25px;
+    padding-top: 30px;
+}
+.icon #fb{
+    padding-right: 35px;
+    color: white;
+}
+.icon #tw{
+    padding-right: 35px;
+    color: white;
+}
+.icon #int{
+padding-right: 35px;
+color: white;
+}
+.icon #gp{
+color: white;
+}
+.data{
+    padding-top: 15px;
+    text-align: center;
+}
+.data #about{
+    color: white;
+    padding-right: 25px;
+}
+.data #help{
+    color: white;
+    padding-right: 25px;
+    padding-left: 20px;
+}
+.data #contact{
+    color: white;
+    padding-right: 25px;
+    padding-left: 20px;
+}
+.data #blog{
+    color: white;
+    padding-left: 20px;
+}
+#bot{
+    text-align: center;
+}
+/* footer ends */
+
+/* sign up */
+.signup{
+    display: block;
+    text-align: center; 
+    margin-top: 15px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-bottom: 15px;
+    border: 2px solid whitesmoke;
+    background-color: transparent;
+}
+
+.signup #but{
+    width: 70%;
+    height: 1.8em;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+}
+.signup #log{
+    color: black;
+    font-weight: bold;
+}
+ #space{
+width: 70%;
+height: 1.5em;
+}
+.signup #contents{
+    font-size: 18px;
+    font-weight: bold;
+    
+}
+.extra{
+    display: inline-flex;
+}
+/* sign up ends  */
