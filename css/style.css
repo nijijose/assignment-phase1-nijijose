@@ -110,10 +110,26 @@ color: white;
     color: black;
     font-weight: bold;
 }
- #space{
+ #name{
 width: 70%;
 height: 1.5em;
 }
+#mail{
+    width: 70%;
+    height: 1.5em;
+    }
+#num{
+        width: 70%;
+        height: 1.5em;
+    }
+#pwd{
+        width: 70%;
+        height: 1.5em;
+    }
+#repwd{
+        width: 70%;
+        height: 1.5em;
+    }
 .signup #contents{
     font-size: 18px;
     font-weight: bold;
