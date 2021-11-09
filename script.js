@@ -20,20 +20,12 @@ function check(){
         return false;
     }
 
-    if(phno.test(phn.value)){
-        fedbck.innerHTML = "";
-        phn.style.border = "3px solid green";
-        return true;
-    }
-    else{
-        fedbck.innerHTML = "Invalid format";
-        fedbck.style.color = "red";
-        phn.style.border = "3px solid red";
-        return false;
-    }
-
     
 }
+
+
+    
+
     
     
 
