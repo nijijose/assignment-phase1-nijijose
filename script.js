@@ -67,15 +67,17 @@ function matcher(){
       }
 }
 function search(){
-  if(fill.value != ""){
+  if(fill.value!=""){
     user.innerHTML = "";
+    fill.style.border = "3px solid green";
     return true;
   }
   else{
-    user.innerHTML = "Please enter a valid username";
+    user.innerHTML = "Please enter the username";
     user.style.color = "red";
     fill.style.border = "3px solid red";
     return false;
+
   }
 }
 
@@ -117,15 +119,12 @@ function checkPassword(password){
         break;
       case 2:
         strengthBar.value = 50;
-        strengthBar.style.color = "yellow";
         break;
       case 3:
         strengthBar.value = 75;
-        strengthBar.style.color = "yellow";
         break; 
       case 4:
           strengthBar.value = 100;
-          strengthBar.style.color = "green";
           break;   
     }
 }
