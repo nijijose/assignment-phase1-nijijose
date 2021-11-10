@@ -88,8 +88,17 @@
         <div>
             <label id="contents">Password</label>
             <br>
-            <input id="pwd" type="password" placeholder="Enter the password">
-        </div>
+            <input id="password" type="password" placeholder="Enter the password" value="" name="password" class="form-control" onkeyup="isGood(this.value)">
+            <small class="help-block" id="password-text"></small>
+          </div>
+          <div>
+            <ul>
+              <li>Uppercase Letters</li>
+              <li>Lowercase Letters</li>
+              <li>Numbers</li>
+              <li>Special Character</li>
+            </ul>
+          </div>
         <br>
         <div>
             <label id="contents">Re-type Password</label>
