@@ -61,13 +61,14 @@
 <br>
 
 <!-- sign up -->
-    <form action="login.html" class="signup" onsubmit="return !! (check() & validate()) ;">
+    <form action="login.html" class="signup" onsubmit="return !! (check() & validate() & checker() & matcher() & search()) ;">
         <h2>Create an Account</h2>
         <br>
          <div> 
             <label id="contents">Username</label>
             <br>
-            <input id="name" type="text" placeholder="Enter the username"> 
+            <input id="name" type="text" placeholder="Enter the username" oninput="return search();"> 
+            <label for="error" id="uname"></label>
         </div> 
         <br>
         <div>
@@ -88,7 +89,8 @@
         <div>
             <label id="contents">Password</label>
             <br>
-            <input id="password" type="password" placeholder="Enter the password"  style="width: 70%; height: 1.5em;">
+            <input id="password" type="password" placeholder="Enter the password" oninput="return checker();" style="width: 70%; height: 1.5em;">
+            <label for="error" id="perror"></label>
             <br>
             <input type="checkbox" onclick="show();">Show Password
             <br>
@@ -97,9 +99,10 @@
           </div>
         <br>
         <div>
-            <label id="contents">Re-type Password</label>
+            <label id="contents">Confirm Password</label>
             <br>
-            <input id="repwd" type="password" placeholder="Re-enter the  password">
+            <input id="repwd" type="password" placeholder="Re-enter the  password" oninput="return matcher();">
+            <label for="error" id="retype"></label>
         </div>
         <br>
         

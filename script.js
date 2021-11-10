@@ -1,9 +1,14 @@
 let email = document.getElementById("mail");
 let msg = document.getElementById("error");
-// let pass = document.getElementById("password");
-let name = document.getElementById("name");
+let pword = document.getElementById("password");
+let epass = document.getElementById("perror");
+let repass = document.getElementById("repwd");
+let reenter = document.getElementById("retype");
+let fill = document.getElementById("name");
+let user = document.getElementById("uname");
 let phn = document.getElementById("num");
 let fedbck = document.getElementById("emsg");
+
 
 function check(){
     let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+)\.([a-z]{2,3})(.[a-z]{2,3})?$/;
@@ -33,6 +38,51 @@ function validate(){
         return false;
     }
 }
+function checker(){
+      var passregexp = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/;
+      if(passregexp.test(pword.value)){
+          epass.innerHTML = "";
+          pword.style.border = "3px solid green";
+          return true;
+      }
+      else{
+        epass.innerHTML = "Please enter the password that contain minimum 8 characters, at least one lowercase letter and uppercase letter, and atleast one number";
+        epass.style.color = "red";
+        pword.style.border = "3px solid red";
+        return false;
+      }
+}
+function matcher(){
+      if(pword.value==repass.value){
+           reenter.innerHTML = "Password and confirm password are matching";
+           reenter.style.color = "green";
+           repass.style.border = "3px solid green";
+           return true;
+      }
+      else{
+        reenter.innerHTML = "Password and confirm password are not matching";
+        reenter.style.color = "red";
+        repass.style.border = "3px solid red";
+        return false;
+      }
+}
+function search(){
+  if(fill.value != ""){
+    user.innerHTML = "";
+    return true;
+  }
+  else{
+    user.innerHTML = "Please enter a valid username";
+    user.style.color = "red";
+    fill.style.border = "3px solid red";
+    return false;
+  }
+}
+
+
+
+
+
 function show(){
   var x = document.getElementById("password");
   if(x.type === "password"){
@@ -42,6 +92,12 @@ function show(){
     x.type = "password";
   }
 }
+
+
+
+
+
+
 var pass = document.getElementById("password");
 pass.addEventListener("keyup",function(){
       checkPassword(pass.value)
