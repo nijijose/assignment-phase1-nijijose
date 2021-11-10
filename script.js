@@ -67,7 +67,8 @@ function matcher(){
       }
 }
 function search(){
-  if(fill.value!=""){
+  let nameregexp = /^([a-zA-Z\ ]+)$/
+  if(nameregexp.test(fill.value)){
     user.innerHTML = "";
     fill.style.border = "3px solid green";
     return true;
