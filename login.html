@@ -19,7 +19,7 @@
     form{
       margin-top: 50px;
       color: black;
-      font-size: 22px;
+      font-size: 22px; 
       
     }
       </style>
@@ -70,11 +70,11 @@
           
   <!-- form starts -->
     <div class="container">
-    <form class="col-lg-4">
+    <form class="col-lg-4" onsubmit="return checker();">
       <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      
+        <input type="email" class="form-control" id="mail" aria-describedby="emailHelp" oninput="return checker();" >
+        <label for="error" id="error"></label>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
@@ -109,6 +109,6 @@
   </div>
 </footer>
 <!-- footer ends -->
-
+<script src="login.js"></script>
 </body>
 </html>

@@ -61,7 +61,7 @@
 <br>
 
 <!-- sign up -->
-    <form action="login.html" class="signup" onsubmit="return check();">
+    <form action="login.html" class="signup" onsubmit="return !! (check() & validate()) ;">
         <h2>Create an Account</h2>
         <br>
          <div> 
@@ -81,7 +81,7 @@
         <div>
             <label id="contents">Phone Number</label>
             <br>
-            <input id="num" type="tel" placeholder="Enter the phone number">
+            <input id="num" type="tel" placeholder="Enter the phone number" oninput="return validate();">
             <label for="error" id="emsg"></label>
         </div>
         <br>
