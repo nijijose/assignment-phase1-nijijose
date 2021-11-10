@@ -79,10 +79,6 @@ function search(){
   }
 }
 
-
-
-
-
 function show(){
   var x = document.getElementById("password");
   if(x.type === "password"){
@@ -92,11 +88,6 @@ function show(){
     x.type = "password";
   }
 }
-
-
-
-
-
 
 var pass = document.getElementById("password");
 pass.addEventListener("keyup",function(){
