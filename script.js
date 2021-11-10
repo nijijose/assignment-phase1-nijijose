@@ -33,50 +33,50 @@ function validate(){
         return false;
     }
 }
-function isGood(password) {
-    var password_strength = document.getElementById("password-text");
-
-    //TextBox left blank.
-    if (password.length == 0) {
-      password_strength.innerHTML = "";
-      return;
-    }
-
-    //Regular Expressions.
-    var regex = new Array();
-    regex.push("[A-Z]"); //Uppercase Alphabet.
-    regex.push("[a-z]"); //Lowercase Alphabet.
-    regex.push("[0-9]"); //Digit.
-    regex.push("[$@$!%*#?&]"); //Special Character.
-
-    var passed = 0;
-
-    //Validate for each Regular Expression.
-    for (var i = 0; i < regex.length; i++) {
-      if (new RegExp(regex[i]).test(password)) {
-        passed++;
-      }
-    }
-
-    //Display status.
-    var strength = "";
-    switch (passed) {
-      case 0:
-      case 1:
-      case 2:
-        strength = "<small class='progress-bar bg-danger' style='width: 40%'>Weak</small>";
-        break;
-      case 3:
-        strength = "<small class='progress-bar bg-warning' style='width: 60%'>Medium</small>";
-        break;
-      case 4:
-        strength = "<small class='progress-bar bg-success' style='width: 100%'>Strong</small>";
-        break;
-
-    }
-    password_strength.innerHTML = strength;
-
+function show(){
+  var x = document.getElementById("password");
+  if(x.type === "password"){
+    x.type = "text";
   }
+  else{
+    x.type = "password";
+  }
+}
+var pass = document.getElementById("password");
+pass.addEventListener("keyup",function(){
+      checkPassword(pass.value)
+})
+// function checkPassword(password){
+//     var strengthBar = document.getElementById("strength");
+//     var strength = 0;
+//     if(password.match(/^?=.*[a-z]+$/)){
+//       strength +=1;
+//     }
+//     if(password.match(/^?=.*[A-Z]+$/)){
+//       strength +=1;
+//     }
+//     if(password.match(/^?=.*[0-9]+$/)){
+//       strength += 1;
+//     }
+//     if(password.length >= 8){
+//       strength +=1;
+//     }
+//     switch(strength){
+//       case 0:
+//         strengthBar.value = 25;
+//         break;
+//       case 1:
+//         strengthBar.value = 50;
+//         break;
+//       case 2:
+//         strengthBar.value = 75;
+//         break;
+//       case 3:
+//         strengthBar.value = 100;
+//         break;  
+
+//     }
+// }
     
 
     

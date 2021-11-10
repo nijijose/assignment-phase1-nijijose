@@ -88,16 +88,12 @@
         <div>
             <label id="contents">Password</label>
             <br>
-            <input id="password" type="password" placeholder="Enter the password" value="" name="password" class="form-control" onkeyup="isGood(this.value)">
-            <small class="help-block" id="password-text"></small>
-          </div>
-          <div>
-            <ul>
-              <li>Uppercase Letters</li>
-              <li>Lowercase Letters</li>
-              <li>Numbers</li>
-              <li>Special Character</li>
-            </ul>
+            <input id="password" type="password" placeholder="Enter the password"  style="width: 70%; height: 1.5em;">
+            <br>
+            <input type="checkbox" onclick="show();">Show Password
+            <br>
+            <!-- <label for="strength">Password Strength:</label> -->
+            <!-- <progress id="strength" value="0" max="100" oninput="checkPassword(password);" style="width: 280px; height: 1.5em;"></progress> -->
           </div>
         <br>
         <div>
